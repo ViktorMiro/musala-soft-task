@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  drones_db:
+    container_name: drones_db
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+      - MYSQL_DATABASE=drones_db
+    volumes:
+      - drones_db:/var/lib/drones_db
+
+  drones:
+    container_name: drones
+    build: ./
+    ports:
+      - 8080:8080
+    depends_on:
+      - drones_db
+
+volumes:
+  drones_db:

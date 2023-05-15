@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "73badfbd-733d-4542-a17c-b9a2fb800206",
+		"name": "Drones Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4819778"
+	},
+	"item": [
+		{
+			"name": "Create drone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"serialNumber\": \"0000003\",\n    \"model\": \"MIDDLEWEIGHT\",\n    \"state\": \"LOADING\",\n    \"weightLimit\": 550,\n    \"battery\": 50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/drones/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"drones",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create route",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/drones/1/create_route/40",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"drones",
+						"1",
+						"create_route",
+						"40"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clear route",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/drones/1/clear_route",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"drones",
+						"1",
+						"clear_route"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Load Drone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/drones/1/load/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"drones",
+						"1",
+						"load",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Start Drone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/drones/1/start",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"drones",
+						"1",
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UNLoad Drone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/drones/1/unload/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"drones",
+						"1",
+						"unload",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create medication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\": \"0_000007\",\n    \"name\": \"some_med\",\n    \"image\": null,\n    \"weight\": 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/medications/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medications",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update drone",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"serialNumber\": \"0111111\",\n    \"model\": \"MIDDLEWEIGHT\",\n    \"state\": \"LOADING\",\n    \"weightLimit\": 400,\n    \"battery\": 50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/drones/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"drones",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete drone",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/drones/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"drones",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all drones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/drones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"drones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get logs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/event-logs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"event-logs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all medications",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/medications",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medications"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
